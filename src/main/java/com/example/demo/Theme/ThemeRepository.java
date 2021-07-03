@@ -8,5 +8,4 @@ import java.awt.print.Pageable;
 
 @Repository
 public interface ThemeRepository extends JpaRepository<Theme,Long> {
-    Page<Theme> findAll(Pageable pageable);
 }
