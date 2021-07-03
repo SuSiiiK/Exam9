@@ -24,14 +24,12 @@ public class User {
 
     private String password;
 
-    @ToString.Exclude
-    @OneToMany
-    private List<Theme> themes;
 
     @Builder.Default
     private boolean enabled = true;
 
     @Builder.Default
     private String role = "USER";
+
 
 }
