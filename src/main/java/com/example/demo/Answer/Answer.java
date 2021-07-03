@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Data
 @Entity
@@ -23,12 +24,13 @@ public class Answer {
 
     private String message;
 
-    @Builder.Default
-    private LocalDate answerDate = LocalDate.now();
+    private LocalDateTime time;
 
     @ManyToOne
+    @JoinColumn(name = "themes_id")
     private Theme theme;
 
     @ManyToOne
+    @JoinColumn(name = "users_id")
     private User user;
 }

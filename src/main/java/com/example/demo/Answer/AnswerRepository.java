@@ -10,6 +10,5 @@ import java.util.List;
 
 @Repository
 public interface AnswerRepository extends JpaRepository<Answer,Long> {
-    Page<Answer> findAnswersByTheme(Theme theme, Pageable pageable);
-    List<Answer> findAnswersByTheme(Theme theme);
+    Page<Answer> findAllByTheme_Id(Long theme_id, Pageable pageable);
 }
